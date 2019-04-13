@@ -31,8 +31,9 @@ To Run:
 
 When Running:
     The client will connect to the running server via TCP connection. After connecting, the client side will prompt for a file name.
-    The file name can be any file that is within the /server/ subdirectory. Once the file is transferred it will appear in the /client/ subdirectory. 
-    The client can then decide whether to grab another file or exit. If the filename already exists on the client side, it will be replaced with a new copy.
+    The file name can be any file that is within the /server/ directory. Once transferred it will appear in the /client/ directory. 
+    The client can then decide whether to grab another file or exit. If the filename already exists on the client side, it will be 
+    replaced with a new copy. Terminate connection by typing "exit".
 
 
 Sample Client Output:

@@ -37,7 +37,7 @@ void fileTransfer(int sockfd){
 		if ((strncmp(messageBuffer, "exit", 4)) == 0) {
 			// Reset messageBuffer, read returned exit message from server
 			bzero(messageBuffer, sizeof(messageBuffer)); 
-        	read(sockfd, messageBuffer, sizeof(messageBuffer)); // Read message returned from server
+			read(sockfd, messageBuffer, sizeof(messageBuffer)); // Read message returned from server
 			
 			// If server message is "exit", close connection
 			if ((strncmp(messageBuffer, "exit", 4)) == 0) {
@@ -53,7 +53,7 @@ void fileTransfer(int sockfd){
 		
 		// Reset messageBuffer, wait for OK message to confirm file existance.
 		bzero(messageBuffer, sizeof(messageBuffer)); 
-        read(sockfd, messageBuffer, sizeof(messageBuffer)); // Read message returned from server
+		read(sockfd, messageBuffer, sizeof(messageBuffer)); // Read message returned from server
 		
 		// If server finds file and sends OK message, send an OK back and start receiving the file
 		if ((strncmp(messageBuffer, "OK", 2)) == 0) {

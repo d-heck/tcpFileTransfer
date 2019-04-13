@@ -52,7 +52,7 @@ void fileTransfer(int sockfd){
 
 			// Reset messageBuffer, wait for client to acknowledge the OK message
 			bzero(messageBuffer, sizeof(messageBuffer)); 
-        	read(sockfd, messageBuffer, sizeof(messageBuffer));
+			read(sockfd, messageBuffer, sizeof(messageBuffer));
 
 			// If read message is OK send file
 			if ((strncmp(messageBuffer, "OK", 2)) == 0) {
